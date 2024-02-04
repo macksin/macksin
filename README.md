@@ -1,6 +1,4 @@
-- 👋 Hi, I’m @macksin
 - 👀 I’m interested in Machine Learning, Deep Learning, Unsupervised Learning, Encryption, Bitcoin, Frameworks and CI/CD.
-- 🌱 I’m currently learning Unsupervised Learning and C++
 - 💞️ I’m looking to collaborate on Machine Learning softwares and frameworks.
 - 📫 How to reach me mack.heyha@gmail.com
 
