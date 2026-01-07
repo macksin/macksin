@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mackson — Notes on Data, Health, and Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafafa;
+            --bg-elevated: #ffffff;
+            --text: #1a1a1a;
+            --text-muted: #555;
+            --accent: #2563eb;
+            --border: #e5e5e5;
+            --serif: 'Source Serif 4', Georgia, serif;
+            --sans: 'Source Sans 3', -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .posts {
+            list-style: none;
+        }
+
+        .post-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .post-item:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .post-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .post-link:hover .post-title {
+            color: var(--accent);
+        }
+
+        .post-title {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.15s ease;
+        }
+
+        .post-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mackson</h1>
+            <p class="tagline">Notes on data, health, and building systems that work.</p>
+        </header>
+
+        <ul class="posts">
+            <li class="post-item">
+                <a href="/transformation/" class="post-link">
+                    <h2 class="post-title">How I Lost 11.3 kg in One Year</h2>
+                    <p class="post-description">The year passes whether you do it or not. A systematic approach to body recomposition with 313 workouts logged, 207 days of macro tracking, and statistically significant results.</p>
+                    <span class="post-meta">January 2026 · Case Study</span>
+                </a>
+            </li>
+            
+            <!-- Add more posts here as you write them:
+            
+            <li class="post-item">
+                <a href="/post-slug/" class="post-link">
+                    <h2 class="post-title">Post Title Here</h2>
+                    <p class="post-description">Brief description of what the post covers.</p>
+                    <span class="post-meta">Month Year · Category</span>
+                </a>
+            </li>
+            
+            -->
+        </ul>
+
+        <footer>
+            <p>Data scientist. Building systems that work.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/YOUR-PROFILE">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
