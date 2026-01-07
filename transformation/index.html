@@ -413,6 +413,40 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* Unit Toggle */
+        .unit-toggle-container {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-elevated);
+            padding: 0.25rem;
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            z-index: 10;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-family: var(--sans);
+        }
+
+        .toggle-btn.active {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -420,15 +454,20 @@
 
     <!-- Hero -->
     <header class="hero">
+        <div class="unit-toggle-container">
+            <button class="toggle-btn active" onclick="toggleUnits('kg')">KG</button>
+            <button class="toggle-btn" onclick="toggleUnits('lbs')">LBS</button>
+        </div>
         <div class="hero-content">
             <p class="hero-label">Case Study</p>
-            <h1>How I Lost <span>11.3 kg</span> in One Year</h1>
+            <h1>How I Lost <span class="unit-weight" data-val-kg="11.3">11.3 kg</span> in One Year</h1>
             <p class="hero-subtitle">The year passes whether you do it or not. A systematic approach to body
                 recomposition for people with demanding lives: 313 workouts logged, 207 days of macro tracking, and
                 statistically significant results.</p>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <span class="hero-stat-value">-11.3 kg</span>
+                    <span class="hero-stat-value">-<span class="unit-weight" data-val-kg="11.3">11.3</span> <span
+                            class="unit-label">kg</span></span>
                     <span class="hero-stat-label">Weight Lost</span>
                 </div>
                 <div class="hero-stat">
@@ -490,12 +529,14 @@
 
             <div class="data-grid">
                 <div class="data-card">
-                    <div class="data-card-value">91.1 kg</div>
+                    <div class="data-card-value"><span class="unit-weight" data-val-kg="91.1">91.1</span> <span
+                            class="unit-label">kg</span></div>
                     <div class="data-card-label">Starting Weight</div>
                     <div class="data-card-sublabel">February 2025</div>
                 </div>
                 <div class="data-card">
-                    <div class="data-card-value">79.8 kg</div>
+                    <div class="data-card-value"><span class="unit-weight" data-val-kg="79.8">79.8</span> <span
+                            class="unit-label">kg</span></div>
                     <div class="data-card-label">Final Weight</div>
                     <div class="data-card-sublabel">January 2026</div>
                 </div>
@@ -665,44 +706,46 @@
                 <tbody>
                     <tr>
                         <td>Incline Bench Press</td>
-                        <td>56 kg</td>
-                        <td>88 kg</td>
+                        <td><span class="unit-weight" data-val-kg="56">56</span> <span class="unit-label">kg</span></td>
+                        <td><span class="unit-weight" data-val-kg="88">88</span> <span class="unit-label">kg</span></td>
                         <td class="gain">+57%</td>
                     </tr>
                     <tr>
                         <td>Bench Press</td>
-                        <td>90 kg</td>
-                        <td>110 kg</td>
+                        <td><span class="unit-weight" data-val-kg="90">90</span> <span class="unit-label">kg</span></td>
+                        <td><span class="unit-weight" data-val-kg="110">110</span> <span class="unit-label">kg</span>
+                        </td>
                         <td class="gain">+22%</td>
                     </tr>
                     <tr>
                         <td>EZ Bar Curl</td>
-                        <td>20 kg</td>
-                        <td>30 kg</td>
+                        <td><span class="unit-weight" data-val-kg="20">20</span> <span class="unit-label">kg</span></td>
+                        <td><span class="unit-weight" data-val-kg="30">30</span> <span class="unit-label">kg</span></td>
                         <td class="gain">+50%</td>
                     </tr>
                     <tr>
                         <td>Seated Row</td>
-                        <td>50 kg</td>
-                        <td>70 kg</td>
+                        <td><span class="unit-weight" data-val-kg="50">50</span> <span class="unit-label">kg</span></td>
+                        <td><span class="unit-weight" data-val-kg="70">70</span> <span class="unit-label">kg</span></td>
                         <td class="gain">+40%</td>
                     </tr>
                     <tr>
                         <td>Seated Leg Curl</td>
-                        <td>50 kg</td>
-                        <td>65 kg</td>
+                        <td><span class="unit-weight" data-val-kg="50">50</span> <span class="unit-label">kg</span></td>
+                        <td><span class="unit-weight" data-val-kg="65">65</span> <span class="unit-label">kg</span></td>
                         <td class="gain">+30%</td>
                     </tr>
                     <tr>
                         <td>Squat</td>
-                        <td>90 kg</td>
-                        <td>100 kg</td>
+                        <td><span class="unit-weight" data-val-kg="90">90</span> <span class="unit-label">kg</span></td>
+                        <td><span class="unit-weight" data-val-kg="100">100</span> <span class="unit-label">kg</span>
+                        </td>
                         <td class="gain">+11%</td>
                     </tr>
                     <tr>
                         <td>Lateral Raise</td>
-                        <td>10 kg</td>
-                        <td>18 kg</td>
+                        <td><span class="unit-weight" data-val-kg="10">10</span> <span class="unit-label">kg</span></td>
+                        <td><span class="unit-weight" data-val-kg="18">18</span> <span class="unit-label">kg</span></td>
                         <td class="gain">+80%</td>
                     </tr>
                 </tbody>
@@ -749,216 +792,223 @@
     </footer>
 
     <script>
-        // Weight Chart - Monthly averages from real data
-        const weightCtx = document.getElementById('weightChart').getContext('2d');
-        new Chart(weightCtx, {
-            type: 'line',
-            data: {
-                labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
-                datasets: [{
-                    label: 'Weight (kg)',
-                    data: [90.1, 88.2, 86.2, 84.8, 83.5, 82.9, 82.0, 81.6, 81.9, 82.0, 81.0, 79.8],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.1)',
-                    borderWidth: 2,
-                    fill: true,
-                    tension: 0.3,
-                    pointBackgroundColor: '#2563eb',
-                    pointBorderColor: '#fff',
-                    pointBorderWidth: 2,
-                    pointRadius: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                },
-                scales: {
-                    y: {
-                        min: 78,
-                        max: 92,
-                        grid: {
-                            color: 'rgba(0,0,0,0.06)'
-                        },
-                        ticks: {
-                            color: '#555',
-                            callback: function (value) {
-                                return value + ' kg';
-                            }
-                        }
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            color: '#555'
-                        }
-                    }
-                }
-            }
-        });
+        // Data Sources
+        const weightDataKg = [90.1, 88.2, 86.2, 84.8, 83.5, 82.9, 82.0, 81.6, 81.9, 82.0, 81.0, 79.8];
+        const weightTrendKg = [91.1, 89.5, 87.6, 86.8, 85.3, 83.8, 82.9, 82.7, 82.1, 81.9, 82.0, 81.4];
+        const caloriesData = [959, 1832, 1394, 1366, 1540, 1211, 1800, 2252, 1239, 1462, 1545, 1646];
 
-        // Weight vs Net Calories Chart - Kalman filtered data
-        const weightCalCtx = document.getElementById('weightCaloriesChart').getContext('2d');
-        new Chart(weightCalCtx, {
-            type: 'line',
-            data: {
-                labels: ['Feb 24', 'Mar 14', 'Apr 6', 'Apr 30', 'May 23', 'Jun 17', 'Jul 5', 'Aug 5', 'Sep 16', 'Oct 26', 'Nov 27', 'Dec 23'],
-                datasets: [{
-                    label: 'Weight (kg)',
-                    data: [91.1, 89.5, 87.6, 86.8, 85.3, 83.8, 82.9, 82.7, 82.1, 81.9, 82.0, 81.4],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'transparent',
-                    borderWidth: 2,
-                    tension: 0.3,
-                    pointRadius: 3,
-                    pointBackgroundColor: '#2563eb',
-                    yAxisID: 'y'
-                },
-                {
-                    label: 'Net Calories (Kalman)',
-                    data: [959, 1832, 1394, 1366, 1540, 1211, 1800, 2252, 1239, 1462, 1545, 1646],
-                    borderColor: '#16a34a',
-                    backgroundColor: 'transparent',
-                    borderWidth: 2,
-                    tension: 0.3,
-                    pointRadius: 3,
-                    pointBackgroundColor: '#16a34a',
-                    yAxisID: 'y1'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                interaction: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                plugins: {
-                    legend: {
-                        display: true,
-                        labels: {
-                            color: '#555',
-                            usePointStyle: true,
-                            padding: 20
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        type: 'linear',
-                        display: true,
-                        position: 'left',
-                        min: 78,
-                        max: 93,
-                        grid: {
-                            color: 'rgba(0,0,0,0.06)'
-                        },
-                        ticks: {
-                            color: '#2563eb',
-                            callback: function (value) {
-                                return value + ' kg';
-                            }
-                        }
-                    },
-                    y1: {
-                        type: 'linear',
-                        display: true,
-                        position: 'right',
-                        min: 800,
-                        max: 2400,
-                        grid: {
-                            drawOnChartArea: false,
-                        },
-                        ticks: {
-                            color: '#16a34a',
-                            callback: function (value) {
-                                return value + ' cal';
-                            }
-                        }
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            color: '#555',
-                            maxRotation: 45
-                        }
-                    }
-                }
-            }
-        });
+        let weightChart, weightCaloriesChart, rpeChart;
+        let currentUnit = 'kg';
 
-        // RPE Chart - Lateral Raise Kalman filtered data
-        const rpeCtx = document.getElementById('rpeChart').getContext('2d');
-        new Chart(rpeCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jan 2', 'Mar 3', 'Apr 5', 'May 4', 'Jun 7', 'Jul 4', 'Sep 2', 'Oct 5', 'Nov 1', 'Dec 1', 'Jan 4'],
-                datasets: [{
-                    label: 'Raw RPE',
-                    data: [9.0, 8.8, 8.6, 10.0, 9.6, 9.1, 8.0, 8.8, 9.5, 9.3, 9.5],
-                    borderColor: 'rgba(22, 163, 74, 0.4)',
-                    backgroundColor: 'transparent',
-                    borderWidth: 1,
-                    tension: 0,
-                    pointRadius: 4,
-                    pointBackgroundColor: 'rgba(22, 163, 74, 0.5)',
-                    pointBorderColor: 'transparent'
+        function initCharts() {
+            // Weight Chart
+            const weightCtx = document.getElementById('weightChart').getContext('2d');
+            weightChart = new Chart(weightCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
+                    datasets: [{
+                        label: 'Weight',
+                        data: weightDataKg,
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.3,
+                        pointBackgroundColor: '#2563eb',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 4
+                    }]
                 },
-                {
-                    label: 'Kalman Filtered',
-                    data: [9.00, 8.95, 8.74, 9.42, 9.56, 9.32, 8.69, 8.74, 9.14, 9.40, 9.45],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'transparent',
-                    borderWidth: 2,
-                    tension: 0.3,
-                    pointRadius: 3,
-                    pointBackgroundColor: '#2563eb'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: true,
-                        labels: {
-                            color: '#555',
-                            usePointStyle: true,
-                            padding: 20
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        min: 8.0,
-                        max: 10.5,
-                        grid: {
-                            color: 'rgba(0,0,0,0.06)'
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: {
+                            min: 78,
+                            max: 92,
+                            grid: { color: 'rgba(0,0,0,0.06)' },
+                            ticks: {
+                                color: '#555',
+                                callback: value => value + ' ' + currentUnit
+                            }
                         },
-                        ticks: {
-                            color: '#555'
-                        }
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            color: '#555',
-                            maxRotation: 45
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#555' }
                         }
                     }
                 }
-            }
-        });
+            });
+
+            // Weight vs Net Calories Chart
+            const weightCalCtx = document.getElementById('weightCaloriesChart').getContext('2d');
+            weightCaloriesChart = new Chart(weightCalCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Feb 24', 'Mar 14', 'Apr 6', 'Apr 30', 'May 23', 'Jun 17', 'Jul 5', 'Aug 5', 'Sep 16', 'Oct 26', 'Nov 27', 'Dec 23'],
+                    datasets: [{
+                        label: 'Weight',
+                        data: weightTrendKg,
+                        borderColor: '#2563eb',
+                        backgroundColor: 'transparent',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#2563eb',
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Net Calories (Kalman)',
+                        data: caloriesData,
+                        borderColor: '#16a34a',
+                        backgroundColor: 'transparent',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#16a34a',
+                        yAxisID: 'y1'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            labels: {
+                                color: '#555',
+                                usePointStyle: true,
+                                padding: 20
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            min: 78,
+                            max: 93,
+                            grid: { color: 'rgba(0,0,0,0.06)' },
+                            ticks: {
+                                color: '#2563eb',
+                                callback: value => value + ' ' + currentUnit
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            min: 800,
+                            max: 2400,
+                            grid: { display: false },
+                            ticks: { color: '#16a34a' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#555' }
+                        }
+                    }
+                }
+            });
+
+            // RPE Chart
+            const rpeCtx = document.getElementById('rpeChart').getContext('2d');
+            rpeChart = new Chart(rpeCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2', 'Mar 3', 'Apr 5', 'May 4', 'Jun 7', 'Jul 4', 'Sep 2', 'Oct 5', 'Nov 1', 'Dec 1', 'Jan 4'],
+                    datasets: [{
+                        label: 'Raw RPE',
+                        data: [9.0, 8.8, 8.6, 10.0, 9.6, 9.1, 8.0, 8.8, 9.5, 9.3, 9.5],
+                        borderColor: 'rgba(22, 163, 74, 0.4)',
+                        backgroundColor: 'transparent',
+                        borderWidth: 1,
+                        tension: 0,
+                        pointRadius: 4,
+                        pointBackgroundColor: 'rgba(22, 163, 74, 0.5)',
+                        pointBorderColor: 'transparent'
+                    },
+                    {
+                        label: 'Kalman Filtered',
+                        data: [9.00, 8.95, 8.74, 9.42, 9.56, 9.32, 8.69, 8.74, 9.14, 9.40, 9.45],
+                        borderColor: '#2563eb',
+                        backgroundColor: 'transparent',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#2563eb'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: true } },
+                    scales: {
+                        y: {
+                            min: 8.0,
+                            max: 10.5,
+                            grid: { color: 'rgba(0,0,0,0.06)' },
+                            ticks: { color: '#555' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#555' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function toggleUnits(unit) {
+            if (currentUnit === unit) return;
+            currentUnit = unit;
+
+            // Update toggle buttons
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === unit);
+            });
+
+            // Update text elements
+            document.querySelectorAll('.unit-weight').forEach(el => {
+                const kgVal = parseFloat(el.getAttribute('data-val-kg'));
+                if (unit === 'kg') {
+                    el.textContent = kgVal;
+                } else {
+                    el.textContent = (kgVal * 2.20462).toFixed(1);
+                }
+            });
+
+            document.querySelectorAll('.unit-label').forEach(el => {
+                el.textContent = unit;
+            });
+
+            // Update Charts
+            updateCharts(unit);
+        }
+
+        function updateCharts(unit) {
+            const factor = unit === 'kg' ? 1 : 2.20462;
+
+            // Update Weight Chart
+            weightChart.data.datasets[0].data = weightDataKg.map(v => v * factor);
+            weightChart.options.scales.y.min = unit === 'kg' ? 78 : 170;
+            weightChart.options.scales.y.max = unit === 'kg' ? 92 : 205;
+            weightChart.update();
+
+            // Update Weight vs Calories Chart
+            weightCaloriesChart.data.datasets[0].data = weightTrendKg.map(v => v * factor);
+            weightCaloriesChart.options.scales.y.min = unit === 'kg' ? 78 : 170;
+            weightCaloriesChart.options.scales.y.max = unit === 'kg' ? 93 : 205;
+            weightCaloriesChart.update();
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', initCharts);
     </script>
 
 </body>
