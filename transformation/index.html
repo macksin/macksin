@@ -651,39 +651,88 @@
                 accurate enough for the expected thermodynamic relationships to emerge from the noise. They did.</p>
 
             <h3>Statistical Correlations</h3>
+            <p>Weekly data aggregated and lagged to account for the delay between eating and scale changes. These are
+                the features that actually predicted weight loss:</p>
             <div class="chart-container">
                 <div class="correlation-item">
-                    <span class="correlation-label">Deficit → Weight Change</span>
+                    <span class="correlation-label">Cumulative Net Calories → Weight</span>
                     <div class="correlation-values">
-                        <span class="correlation-r">r = -0.518</span>
-                        <span class="correlation-p significant">p = 0.011 ✓</span>
+                        <span class="correlation-r">r = 0.753</span>
+                        <span class="correlation-p significant">p < 0.0001 ✓</span>
                     </div>
                 </div>
                 <div class="correlation-item">
-                    <span class="correlation-label">Total Calories → Weight Change</span>
+                    <span class="correlation-label">Logging Consistency → Weight Loss</span>
                     <div class="correlation-values">
-                        <span class="correlation-r">r = 0.448</span>
-                        <span class="correlation-p significant">p = 0.032 ✓</span>
+                        <span class="correlation-r">r = -0.527</span>
+                        <span class="correlation-p significant">p = 0.006 ✓</span>
                     </div>
                 </div>
                 <div class="correlation-item">
-                    <span class="correlation-label">Carbohydrates → Weight Change</span>
+                    <span class="correlation-label">Calorie Variance → Weight Change</span>
                     <div class="correlation-values">
-                        <span class="correlation-r">r = 0.478</span>
-                        <span class="correlation-p significant">p = 0.021 ✓</span>
+                        <span class="correlation-r">r = 0.495</span>
+                        <span class="correlation-p significant">p = 0.010 ✓</span>
                     </div>
                 </div>
                 <div class="correlation-item">
-                    <span class="correlation-label">Protein → Weight Change</span>
+                    <span class="correlation-label">2-Week Rolling Avg → Weight Change</span>
                     <div class="correlation-values">
-                        <span class="correlation-r">r = 0.408</span>
-                        <span class="correlation-p">p = 0.053</span>
+                        <span class="correlation-r">r = -0.463</span>
+                        <span class="correlation-p significant">p = 0.017 ✓</span>
+                    </div>
+                </div>
+                <div class="correlation-item">
+                    <span class="correlation-label">3-Week Rolling Avg → Weight Change</span>
+                    <div class="correlation-values">
+                        <span class="correlation-r">r = -0.402</span>
+                        <span class="correlation-p significant">p = 0.042 ✓</span>
                     </div>
                 </div>
             </div>
-            <p style="font-size: 0.9rem; margin-top: 1rem;">The protein correlation being nearly significant while other
-                macros hit significance suggests consistent protein intake (low variance = weak correlation signal).
-                This is actually good — it means protein was reliably adequate throughout.</p>
+
+            <h3>Key Insights</h3>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>Logging Consistency Matters</h4>
+                    <p>Weeks with more complete logging correlated with better weight loss (r = -0.527). This could be
+                        behavioral (tracking = mindfulness) or data quality (more complete picture). Either way:
+                        <strong>track everything</strong>.</p>
+                </div>
+                <div class="method-card">
+                    <h4>Calorie Consistency Matters</h4>
+                    <p>Eating more consistently (lower day-to-day variance) correlated with weight loss (r = 0.495).
+                        Wide swings are less effective than steady deficits. <strong>Boring works</strong>.</p>
+                </div>
+                <div class="method-card">
+                    <h4>Rolling Averages Win</h4>
+                    <p>2-week averages showed stronger correlation than single weeks, confirming the lag effect. Your
+                        body responds to <strong>sustained</strong> signals, not daily noise.</p>
+                </div>
+            </div>
+
+            <h3>The Energy Math</h3>
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="data-card-value">8.13 <span class="unit-label">kg</span></div>
+                    <div class="data-card-label">Total Lost</div>
+                    <div class="data-card-sublabel">Tracked period</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-card-value">14,443</div>
+                    <div class="data-card-label">kcal per kg lost</div>
+                    <div class="data-card-sublabel">Implied from data</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-card-value">7,700</div>
+                    <div class="data-card-label">Theoretical kcal/kg</div>
+                    <div class="data-card-sublabel">Pure fat loss</div>
+                </div>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">The implied kcal/kg being <strong>nearly double</strong> the
+                theoretical value suggests either underreported intake, or — more likely given the strength gains —
+                significant <strong>lean mass preservation</strong>. Muscle weighs more per calorie deficit than fat.
+                The training worked.</p>
 
             <h3>Getting Stronger to Preserve Muscle</h3>
             <p>I was already relatively strong when I started this cut. The biggest challenge wasn't losing fat — it was
