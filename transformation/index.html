@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11.3 kg in One Year: A Data-Driven Transformation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
@@ -42,11 +45,11 @@
 
         /* Hero Section */
         .hero {
-            min-height: 80vh;
+            min-height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             position: relative;
             border-bottom: 1px solid var(--border);
         }
@@ -121,7 +124,7 @@
         }
 
         section {
-            padding: 6rem 0;
+            padding: 3rem 0;
             border-top: 1px solid var(--border);
         }
 
@@ -168,7 +171,7 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 1.25rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         }
 
         .data-card-value {
@@ -205,7 +208,7 @@
             border-radius: 8px;
             padding: 1.5rem;
             margin: 2rem 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         }
 
         .chart-title {
@@ -304,7 +307,7 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         }
 
         .method-card h4 {
@@ -364,31 +367,43 @@
                 opacity: 0;
                 transform: translateY(15px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .hero-content > * {
+        .hero-content>* {
             animation: fadeUp 0.8s ease-out backwards;
         }
 
-        .hero-label { animation-delay: 0.1s; }
-        .hero h1 { animation-delay: 0.2s; }
-        .hero-subtitle { animation-delay: 0.3s; }
-        .hero-stats { animation-delay: 0.4s; }
+        .hero-label {
+            animation-delay: 0.1s;
+        }
+
+        .hero h1 {
+            animation-delay: 0.2s;
+        }
+
+        .hero-subtitle {
+            animation-delay: 0.3s;
+        }
+
+        .hero-stats {
+            animation-delay: 0.4s;
+        }
 
         /* Responsive */
         @media (max-width: 600px) {
             .hero-stats {
                 gap: 2rem;
             }
-            
+
             .hero-stat-value {
                 font-size: 2rem;
             }
-            
+
             h2 {
                 font-size: 2rem;
             }
@@ -400,6 +415,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Hero -->
@@ -407,7 +423,9 @@
         <div class="hero-content">
             <p class="hero-label">Case Study</p>
             <h1>How I Lost <span>11.3 kg</span> in One Year</h1>
-            <p class="hero-subtitle">The year passes whether you do it or not. A systematic approach to body recomposition for people with demanding lives: 313 workouts logged, 207 days of macro tracking, and statistically significant results.</p>
+            <p class="hero-subtitle">The year passes whether you do it or not. A systematic approach to body
+                recomposition for people with demanding lives: 313 workouts logged, 207 days of macro tracking, and
+                statistically significant results.</p>
             <div class="hero-stats">
                 <div class="hero-stat">
                     <span class="hero-stat-value">-11.3 kg</span>
@@ -434,10 +452,16 @@
         <!-- The Problem -->
         <section>
             <h2>The Problem</h2>
-            <p>Modern life is demanding. Between intellectually intensive work, responsibilities, and the constant pull of decisions, most of us operate with elevated baseline stress. This creates a difficult environment for fat loss: cortisol drives appetite toward hyperpalatable food, promotes visceral fat storage, and depletes the willpower we need for "discipline."</p>
-            <p>Most diet advice assumes you can "listen to your body" — but a fatigued mind and stressed body send corrupted signals. I needed a system that would work <strong>despite</strong> the demands of daily life, not one that required me to fight against them every day.</p>
-            <p>I was already training consistently with compound exercises — squats, bench press, rows. But I had zero adherence to tracking what I ate. I assumed training hard was enough. It wasn't.</p>
-            
+            <p>Modern life is demanding. Between intellectually intensive work, responsibilities, and the constant pull
+                of decisions, most of us operate with elevated baseline stress. This creates a difficult environment for
+                fat loss: cortisol drives appetite toward hyperpalatable food, promotes visceral fat storage, and
+                depletes the willpower we need for "discipline."</p>
+            <p>Most diet advice assumes you can "listen to your body" — but a fatigued mind and stressed body send
+                corrupted signals. I needed a system that would work <strong>despite</strong> the demands of daily life,
+                not one that required me to fight against them every day.</p>
+            <p>I was already training consistently with compound exercises — squats, bench press, rows. But I had zero
+                adherence to tracking what I ate. I assumed training hard was enough. It wasn't.</p>
+
             <div class="quote-block">
                 <p>The structure isn't optional — it's protective.</p>
             </div>
@@ -460,7 +484,9 @@
                     <canvas id="weightCaloriesChart"></canvas>
                 </div>
             </div>
-            <p style="font-size: 0.9rem;">Two signals, one story. The Kalman filter removes daily noise from both weight and net calories, revealing the underlying trends. When net calories trend down, weight follows. This is the deficit working exactly as thermodynamics predicts.</p>
+            <p style="font-size: 0.9rem;">Two signals, one story. The Kalman filter removes daily noise from both weight
+                and net calories, revealing the underlying trends. When net calories trend down, weight follows. This is
+                the deficit working exactly as thermodynamics predicts.</p>
 
             <div class="data-grid">
                 <div class="data-card">
@@ -489,32 +515,46 @@
         <!-- The Method -->
         <section>
             <h2>The Method</h2>
-            <p>This protocol combines three elements rarely seen together: stress-reduction principles from Ray Peat's metabolic framework, a tracked caloric deficit, and serious resistance training. The hypothesis: what if you take all the anti-stress nutritional principles but still run a deficit, and counteract muscle loss with progressive overload?</p>
+            <p>This protocol combines three elements rarely seen together: stress-reduction principles from Ray Peat's
+                metabolic framework, a tracked caloric deficit, and serious resistance training. The hypothesis: what if
+                you take all the anti-stress nutritional principles but still run a deficit, and counteract muscle loss
+                with progressive overload?</p>
 
             <div class="method-grid">
                 <div class="method-card">
                     <h4>1. Stress-Aware Nutrition</h4>
-                    <p>Higher carbohydrates (49% of calories) to support thyroid function and blunt cortisol. Orange juice genuinely reduces stress markers. Adequate calcium intake and good quality salt — both Ray Peat recommendations that made a noticeable difference in how I felt day to day.</p>
+                    <p>Higher carbohydrates (49% of calories) to support thyroid function and blunt cortisol. Orange
+                        juice genuinely reduces stress markers. Adequate calcium intake and good quality salt — both Ray
+                        Peat recommendations that made a noticeable difference in how I felt day to day.</p>
                 </div>
                 <div class="method-card">
                     <h4>2. Sleep & Recovery</h4>
-                    <p>Focusing on proteins lower in tryptophan, using l-theanine, and timing coffee properly — all Ray Peat insights — made a significant difference in sleep quality and overall stress levels. Better sleep means better recovery, lower cortisol, and easier adherence.</p>
+                    <p>Focusing on proteins lower in tryptophan, using l-theanine, and timing coffee properly — all Ray
+                        Peat insights — made a significant difference in sleep quality and overall stress levels. Better
+                        sleep means better recovery, lower cortisol, and easier adherence.</p>
                 </div>
                 <div class="method-card">
                     <h4>3. Reliable Foods</h4>
-                    <p>Having foods you can always count on removes decision fatigue. Skim milk became my staple protein source — predictable macros, always available. Toast with jam was my "candy" — satisfying the sweet tooth without derailing the plan. Simple, repeatable, sustainable.</p>
+                    <p>Having foods you can always count on removes decision fatigue. Skim milk became my staple protein
+                        source — predictable macros, always available. Toast with jam was my "candy" — satisfying the
+                        sweet tooth without derailing the plan. Simple, repeatable, sustainable.</p>
                 </div>
                 <div class="method-card">
                     <h4>4. Rigorous Tracking</h4>
-                    <p>Every gram weighed. Every macro logged. When decision fatigue is already high, having fewer food decisions to make is protective, not obsessive. The system removes daily deliberation.</p>
+                    <p>Every gram weighed. Every macro logged. When decision fatigue is already high, having fewer food
+                        decisions to make is protective, not obsessive. The system removes daily deliberation.</p>
                 </div>
                 <div class="method-card">
                     <h4>5. Progression Tracking (Obligatory)</h4>
-                    <p>Food tracking is helpful. Gym tracking is <strong>essential</strong>. Every set logged with weight, reps, and RPE. If you're not tracking progressive overload, you're not giving your body a reason to preserve muscle. This is non-negotiable during a deficit.</p>
+                    <p>Food tracking is helpful. Gym tracking is <strong>essential</strong>. Every set logged with
+                        weight, reps, and RPE. If you're not tracking progressive overload, you're not giving your body
+                        a reason to preserve muscle. This is non-negotiable during a deficit.</p>
                 </div>
                 <div class="method-card">
                     <h4>6. High-Intensity Training</h4>
-                    <p>4-5 sessions per week, training close to failure. Research shows high RPE (9-10) is strongly correlated with muscle retention during a deficit. The effort level tells your body: keep this muscle, you need it.</p>
+                    <p>4-5 sessions per week, training close to failure. Research shows high RPE (9-10) is strongly
+                        correlated with muscle retention during a deficit. The effort level tells your body: keep this
+                        muscle, you need it.</p>
                 </div>
             </div>
 
@@ -539,7 +579,8 @@
             </div>
 
             <h3>The Tools</h3>
-            <p>I ended up with more data than I can handle — granularity down to individual foods, every set at the gym, every workout's calorie burn. Three tools made this possible:</p>
+            <p>I ended up with more data than I can handle — granularity down to individual foods, every set at the gym,
+                every workout's calorie burn. Three tools made this possible:</p>
             <div class="data-grid">
                 <div class="data-card">
                     <div class="data-card-value" style="font-size: 1.5rem;">MyFitnessPal</div>
@@ -557,13 +598,16 @@
                     <div class="data-card-sublabel">Gym calorie estimates validated by correlation</div>
                 </div>
             </div>
-            <p style="font-size: 0.9rem; margin-top: 1rem;">The Apple Watch calorie estimates could have been way off — but the statistically significant correlation between net calories and weight change (r = -0.518, p = 0.011) suggests the estimates were reasonably accurate. The math checked out.</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">The Apple Watch calorie estimates could have been way off —
+                but the statistically significant correlation between net calories and weight change (r = -0.518, p =
+                0.011) suggests the estimates were reasonably accurate. The math checked out.</p>
         </section>
 
         <!-- The Proof -->
         <section>
             <h2>The Proof</h2>
-            <p>The data scientist in me needed more than before/after photos. I needed to verify that my tracking was accurate enough for the expected thermodynamic relationships to emerge from the noise. They did.</p>
+            <p>The data scientist in me needed more than before/after photos. I needed to verify that my tracking was
+                accurate enough for the expected thermodynamic relationships to emerge from the noise. They did.</p>
 
             <h3>Statistical Correlations</h3>
             <div class="chart-container">
@@ -596,12 +640,18 @@
                     </div>
                 </div>
             </div>
-            <p style="font-size: 0.9rem; margin-top: 1rem;">The protein correlation being nearly significant while other macros hit significance suggests consistent protein intake (low variance = weak correlation signal). This is actually good — it means protein was reliably adequate throughout.</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">The protein correlation being nearly significant while other
+                macros hit significance suggests consistent protein intake (low variance = weak correlation signal).
+                This is actually good — it means protein was reliably adequate throughout.</p>
 
             <h3>Getting Stronger to Preserve Muscle</h3>
-            <p>I was already relatively strong when I started this cut. The biggest challenge wasn't losing fat — it was <strong>not losing muscle</strong> in the process. Progressive overload isn't just about getting bigger; during a deficit, it's the signal that tells your body to keep the muscle you have.</p>
-            <p>Tracking progression at the gym isn't optional — it's obligatory. If you're not progressively overloading, you're not giving your body a reason to preserve muscle tissue. Food tracking is helpful; gym tracking is essential.</p>
-            
+            <p>I was already relatively strong when I started this cut. The biggest challenge wasn't losing fat — it was
+                <strong>not losing muscle</strong> in the process. Progressive overload isn't just about getting bigger;
+                during a deficit, it's the signal that tells your body to keep the muscle you have.</p>
+            <p>Tracking progression at the gym isn't optional — it's obligatory. If you're not progressively
+                overloading, you're not giving your body a reason to preserve muscle tissue. Food tracking is helpful;
+                gym tracking is essential.</p>
+
             <table class="strength-table">
                 <thead>
                     <tr>
@@ -663,7 +713,10 @@
                     <canvas id="rpeChart"></canvas>
                 </div>
             </div>
-            <p style="font-size: 0.9rem;">Research shows that training close to failure (high RPE) is strongly correlated with muscle retention during a deficit. Average RPE of 9.1 across 4,790 sets. 46.5% of all sets performed at RPE 9.5 or higher. The Kalman filter smooths daily noise to reveal the true trend: consistent high-intensity effort throughout the entire year.</p>
+            <p style="font-size: 0.9rem;">Research shows that training close to failure (high RPE) is strongly
+                correlated with muscle retention during a deficit. Average RPE of 9.1 across 4,790 sets. 46.5% of all
+                sets performed at RPE 9.5 or higher. The Kalman filter smooths daily noise to reveal the true trend:
+                consistent high-intensity effort throughout the entire year.</p>
         </section>
 
         <!-- Key Insight -->
@@ -672,17 +725,25 @@
             <div class="quote-block">
                 <p>This isn't about willpower. It's about building systems that work within your constraints.</p>
             </div>
-            <p>A year from now, you'll wish you started today. That's not motivation — it's math. The time passes whether you use it or not. Demanding schedules and mental fatigue are reality for most of us. The protocol accounts for this rather than pretending it doesn't exist.</p>
-            <p>The tracking, the reliable foods, the consistent training — these are engineering solutions to a biological problem. Treat your body like you'd treat a data problem: instrument everything, track the variables, run the experiment, iterate.</p>
-            
+            <p>A year from now, you'll wish you started today. That's not motivation — it's math. The time passes
+                whether you use it or not. Demanding schedules and mental fatigue are reality for most of us. The
+                protocol accounts for this rather than pretending it doesn't exist.</p>
+            <p>The tracking, the reliable foods, the consistent training — these are engineering solutions to a
+                biological problem. Treat your body like you'd treat a data problem: instrument everything, track the
+                variables, run the experiment, iterate.</p>
+
             <h3>The Unexpected Outcome</h3>
-            <p>After a year of rigorous tracking, something shifted. I now have a pretty good natural grasp on food intake and its effects. I can look at a meal and estimate macros reasonably well. I understand how my body responds to different foods, different timing, different stress levels. The tracking wasn't just a tool for the cut — it was education. The data built intuition.</p>
+            <p>After a year of rigorous tracking, something shifted. I now have a pretty good natural grasp on food
+                intake and its effects. I can look at a meal and estimate macros reasonably well. I understand how my
+                body responds to different foods, different timing, different stress levels. The tracking wasn't just a
+                tool for the cut — it was education. The data built intuition.</p>
         </section>
 
     </main>
 
     <footer>
-        <p>Built with discipline and data. Questions? <a href="https://linkedin.com/in/YOUR-PROFILE">Connect on LinkedIn</a>.</p>
+        <p>Built with discipline and data. Questions? <a href="https://linkedin.com/in/YOUR-PROFILE">Connect on
+                LinkedIn</a>.</p>
     </footer>
 
     <script>
@@ -723,7 +784,7 @@
                         },
                         ticks: {
                             color: '#555',
-                            callback: function(value) {
+                            callback: function (value) {
                                 return value + ' kg';
                             }
                         }
@@ -798,7 +859,7 @@
                         },
                         ticks: {
                             color: '#2563eb',
-                            callback: function(value) {
+                            callback: function (value) {
                                 return value + ' kg';
                             }
                         }
@@ -814,7 +875,7 @@
                         },
                         ticks: {
                             color: '#16a34a',
-                            callback: function(value) {
+                            callback: function (value) {
                                 return value + ' cal';
                             }
                         }
@@ -899,4 +960,5 @@
     </script>
 
 </body>
+
 </html>
